@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Geometry Fun for Kids</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @keyframes spin-slow {
+        from { transform: rotateX(10deg) rotateY(10deg); }
+        to { transform: rotateX(370deg) rotateY(370deg); }
+      }
+      .animate-spin-slow {
+        animation: spin-slow 20s linear infinite;
+      }
+
+      /* Tesseract Animations */
+      @keyframes tesseract-rotation {
+        from { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+        to { transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg); }
+      }
+      .animate-tesseract {
+          animation: tesseract-rotation 25s linear infinite;
+      }
+      @keyframes tesseract-inner-cube {
+          0% { transform: scale(0.5) rotateX(0deg) rotateY(0deg); }
+          50% { transform: scale(0.25) rotateX(180deg) rotateY(180deg); }
+          100% { transform: scale(0.5) rotateX(360deg) rotateY(360deg); }
+      }
+
+      body {
+        font-family: 'Comic Sans MS', 'Chalkboard SE', 'Marker Felt', sans-serif;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "framer-motion": "https://esm.sh/framer-motion@11.2.12?external=react"
+  }
+}
+</script>
+</head>
+  <body class="bg-sky-100">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
